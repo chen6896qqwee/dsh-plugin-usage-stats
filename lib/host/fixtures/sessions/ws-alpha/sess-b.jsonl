@@ -1,0 +1,7 @@
+{"at":"2026-10-30T20:00:00","type":"turn/start","seq":1,"data":{"turn":1}}
+{"at":"2026-10-30T20:00:01","type":"step/start","seq":2,"data":{"turn":1,"step":1}}
+{"at":"2026-10-30T20:00:02","type":"assistant/message","seq":3,"data":{"turn":1,"step":1,"message":{"role":"assistant","content":[],"source":{"kind":"model","provider":"volcengine","model":"deepseek-v4.1-flash"}},"usage":{"inputTokens":200,"outputTokens":100,"totalTokens":2000,"cacheReadTokens":1700}}}
+{"at":"2026-10-30T20:00:10","type":"step/end","seq":4,"data":{"turn":1,"step":1}}
+{"at":"2026-10-30T20:00:11","type":"step/start","seq":5,"data":{"turn":1,"step":2}}
+{"at":"2026-10-30T20:00:12","type":"assistant/message","seq":6,"data":{"turn":1,"step":2,"message":{"role":"assistant","content":[],"source":{"kind":"model","provider":"ark","model":"deepseek-v4-1-flash-261017"}},"usage":{"inputTokens":1,"outputTokens":1,"totalTokens":300,"cacheReadTokens":0}}}
+{"at":"2026-10-30T20:00:20","type":"turn/end","seq":7,"data":{"turn":1,"reason":{"kind":"completed"}}}

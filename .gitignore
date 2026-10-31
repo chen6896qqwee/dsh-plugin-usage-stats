@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# 本地实测产物（由 selftest.mjs --real 生成，含本机真实用量快照）
+lib/host/selftest.real.json

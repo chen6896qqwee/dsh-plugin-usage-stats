@@ -1,0 +1,10 @@
+{"at":"2026-10-28T09:00:00","type":"turn/start","seq":1,"data":{"turn":1}}
+{"at":"2026-10-28T09:00:05","type":"step/start","seq":2,"data":{"turn":1,"step":1}}
+{"at":"2026-10-28T09:00:30","type":"assistant/message","seq":3,"data":{"turn":1,"step":1,"message":{"role":"assistant","content":[],"source":{"kind":"model","provider":"deepseek-account","model":"deepseek-flash"}},"usage":{"inputTokens":100,"outputTokens":50,"totalTokens":1000,"cacheReadTokens":900}}}
+{"at":"2026-10-28T09:01:00","type":"step/end","seq":4,"data":{"turn":1,"step":1}}
+{"at":"2026-10-28T09:02:00","type":"step/start","seq":5,"data":{"turn":1,"step":2}}
+{"at":"2026-10-28T09:02:20","type":"assistant/message","seq":6,"data":{"turn":1,"step":2,"message":{"role":"assistant","content":[],"source":{"kind":"model","provider":"deepseek-account","model":"deepseek-flash"}},"usage":{"inputTokens":10,"outputTokens":5}}}
+{"at":"2026-10-28T09:03:00","type":"step/end","seq":7,"data":{"turn":1,"step":2}}
+{"at":"2026-10-28T09:04:00","type":"turn/end","seq":8,"data":{"turn":1,"reason":{"kind":"completed"}}}
+{"at":"2026-10-28T09:04:30","type":"tool/result","seq":9,"data":{"ok":true}}
+this line is intentionally broken JSON and must be skipped without throwing

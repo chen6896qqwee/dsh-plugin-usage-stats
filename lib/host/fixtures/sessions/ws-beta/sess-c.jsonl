@@ -1,0 +1,5 @@
+{"at":"2026-10-31T08:00:00","type":"turn/start","seq":1,"data":{"turn":1}}
+{"at":"2026-10-31T08:00:01","type":"step/start","seq":2,"data":{"turn":1,"step":1}}
+{"at":"2026-10-31T08:00:05","type":"assistant/message","seq":3,"data":{"turn":1,"step":1,"message":{"role":"assistant","content":[],"source":{"kind":"model","provider":"huos","model":"deepseek-v4-pro-0801"}},"usage":{"inputTokens":50,"outputTokens":20,"totalTokens":400,"cacheReadTokens":330}}}
+{"at":"2026-10-31T08:00:06","type":"step/end","seq":4,"data":{"turn":1,"step":1}}
+{"at":"2026-10-31T08:01:00","type":"turn/end","seq":5,"data":{"turn":1,"reason":{"kind":"completed"}}}

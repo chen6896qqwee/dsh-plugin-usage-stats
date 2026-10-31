@@ -1,0 +1,3 @@
+{"at":"2026-10-31T00:29:50","type":"step/start","seq":1,"data":{"turn":1,"step":1}}
+{"at":"2026-10-31T00:30:00","type":"assistant/message","seq":2,"data":{"turn":1,"step":1,"message":{"role":"assistant","content":[],"source":{"kind":"model","provider":"deepseek-account","model":"deepseek-flash"}},"usage":{"inputTokens":80,"outputTokens":20,"totalTokens":100}}}
+{"at":"2026-10-31T00:30:30","type":"step/end","seq":3,"data":{"turn":1,"step":1}}

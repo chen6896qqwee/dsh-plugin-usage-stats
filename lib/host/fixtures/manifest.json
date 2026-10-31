@@ -1,0 +1,55 @@
+{
+  "comment": "Synthetic DSH session logs for lib/host/selftest.mjs. `at` is a LOCAL date-time (no offset) that the builder converts into the event `time` (epoch ms) — this is what makes the fixtures host-time-zone independent. `now` below is the fold anchor.",
+  "now": "2026-10-31T10:00:00",
+  "sessions": [
+    {
+      "workspace": "ws-alpha",
+      "session": "sess-a",
+      "encoding": "jsonl",
+      "source": "sessions/ws-alpha/sess-a.jsonl",
+      "covers": "two steps/two turns, totalTokens present, cacheReadTokens present, totalTokens missing (input+output fallback), one broken JSONL line, one non-kept event type extending the session span"
+    },
+    {
+      "workspace": "ws-alpha",
+      "session": "sess-b",
+      "encoding": "jsonl",
+      "source": "sessions/ws-alpha/sess-b.jsonl",
+      "covers": "two raw model ids that both map to label DeepSeek-V4.1-Flash (label merge), second step left unclosed (active time only counts closed steps)"
+    },
+    {
+      "workspace": "ws-beta",
+      "session": "sess-c",
+      "encoding": "jsonl",
+      "source": "sessions/ws-beta/sess-c.jsonl",
+      "covers": "unmapped-family model id (deepseek-v4-pro-0801 -> DeepSeek-V4-Pro), different provider"
+    },
+    {
+      "workspace": "ws-beta",
+      "session": "sess-nousage",
+      "encoding": "jsonl",
+      "source": "sessions/ws-beta/sess-nousage.jsonl",
+      "covers": "session with steps/turn but no usage at all: must not count towards totals.sessions"
+    },
+    {
+      "workspace": "ws-gamma",
+      "session": "sess-f",
+      "encoding": "jsonl",
+      "source": "sessions/ws-gamma/sess-f.jsonl",
+      "covers": "usage at 00:30 local — must bucket to the LOCAL calendar day (a UTC bucketing bug would move it to the previous day)"
+    },
+    {
+      "workspace": "ws-gamma",
+      "session": "sess-empty",
+      "encoding": "jsonl",
+      "source": "sessions/ws-gamma/sess-empty.jsonl",
+      "covers": "empty (valid zstd) log: tolerated, contributes nothing"
+    },
+    {
+      "workspace": "ws-broken",
+      "session": "sess-broken",
+      "encoding": "raw",
+      "content": "this is intentionally not a zstd frame\n",
+      "covers": "corrupt session file: skipped, reported in errors[]"
+    }
+  ]
+}

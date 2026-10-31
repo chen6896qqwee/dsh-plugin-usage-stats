@@ -1,0 +1,11 @@
+# Bundle patch for dsh-plugin-usage-stats.
+#
+# The row mounts the plugin on the Loader so two things happen:
+#   1. the Host half (lib/index.js) registers a named route on `webServer`
+#      that answers `/dsh-usage-stats/data` with the folded usage payload;
+#   2. dsh-client-modules discovers the `dsh.client` declaration and loads
+#      lib/client.js in the browser, which registers the sidebar panel entry
+#      and the global main panel.
+- insert:
+    - id: ui-usage-stats
+      name: 'dsh-plugin-usage-stats'
